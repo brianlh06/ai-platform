@@ -4,7 +4,7 @@ metadata:
   name: ai-api
 spec:
   selector:
-    app: ai-apii
+    app: ai-api
   ports:
   - port: 80
     targetPort: 8000
