@@ -23,7 +23,7 @@ spec:
       serviceAccountName: ai-api
       containers:
       - name: ai-api
-        image: ai-api:v1
+        image: ai-api:v2
         imagePullPolicy: Never
         command: ["sh", "-c", ". /vault/secrets/config && uvicorn main:app --host 0.0.0.0 --port 8000"]
         ports:
