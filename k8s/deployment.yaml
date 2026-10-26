@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-api
+  template:
+    metadata:
+      labels:
+        app: ai-api
+    spec:
+      containers:
+      - name: ai-api
+        image: ai-api:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
